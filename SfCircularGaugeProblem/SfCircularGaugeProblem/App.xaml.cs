@@ -31,6 +31,7 @@ namespace SfCircularGaugeProblem
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
+            containerRegistry.RegisterForNavigation<PrismContentPage>();
         }
     }
 }

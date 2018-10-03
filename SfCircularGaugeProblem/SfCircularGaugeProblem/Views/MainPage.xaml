@@ -1,11 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xForms="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
              x:Class="SfCircularGaugeProblem.Views.MainPage"
              Title="{Binding Title}">
 
     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
         <Label Text="Welcome to Xamarin Forms and Prism!" />
+        <Button Text="Navigate" Command="{Binding NavigateCommand}"/>
+
+        <xForms:SfCircularGauge VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <xForms:SfCircularGauge.Scales>
+                <xForms:Scale>
+                    <xForms:Scale.Pointers>
+                        <xForms:NeedlePointer Type="Bar"
+                                              TailLengthFactor="0.2"/>
+                    </xForms:Scale.Pointers>
+                </xForms:Scale>
+            </xForms:SfCircularGauge.Scales>
+        </xForms:SfCircularGauge>
     </StackLayout>
 
 </ContentPage>

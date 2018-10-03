@@ -21,6 +21,8 @@ namespace SfCircularGaugeProblem.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Syncfusion.SfGauge.XForms.iOS.SfDigitalGaugeRenderer.Init();
+
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App(new iOSInitializer()));
 
